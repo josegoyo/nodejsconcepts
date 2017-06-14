@@ -31,5 +31,5 @@ var arr = [10,10,15];
 var resp3 = arr.reduce(function(acumulador, valor){
 	return acumulador + valor;
 }, 0)
-// el 0 es es estado inicial de la acumulacion 
+// el 0 es es estado inicial de la acumulacion
 console.log("response reduce", resp3)
