@@ -1,16 +1,16 @@
 const Eventos = require('events');
 
-class Carro extends Eventos{
+class Carro extends Eventos {
 
-    constructor(){
+    constructor() {
         super();
         this.contador = 1;
         this.name = 'chole';
     }
 
-    arrancar(){
+    arrancar() {
         console.log("El carro esta arrancando!!");
-        this.emit('arranco',this.contador, this.name);
+        this.emit('arranco', this.contador, this.name);
         this.contador += 1;
     }
 
@@ -18,7 +18,7 @@ class Carro extends Eventos{
 
 var carr1 = new Carro();
 
-carr1.on('arranco', function (cont,name) {
+carr1.on('arranco', function (cont, name) {
     console.log(cont, name, "Cachando el evento, el carro ha arrancado!!!");
 })
 
